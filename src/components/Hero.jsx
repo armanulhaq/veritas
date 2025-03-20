@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 
-const Main = () => {
+const Hero = () => {
     return (
         <div className="h-[90vh] lg:max-w-[80vw] flex flex-col px-5 md:px-10 lg:px-15 gap-5 lg:gap-10  justify-center">
             <div className="w-fit text-black text-xs lg:text-sm bg-[#ffedd8] rounded-2xl px-3 py-1">
@@ -33,4 +33,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default Hero;
