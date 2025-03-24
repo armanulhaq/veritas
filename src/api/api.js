@@ -22,7 +22,7 @@ const analyzeNewsArticle = (articleText) => {
 
                     ${articleText}
 
-                    Provide the response **strictly in the following JSON format**:
+                    Provide the response without any sources or formatting **strictly in the following JSON format**:
 
                     {
                         "sections": [

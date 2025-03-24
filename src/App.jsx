@@ -6,6 +6,8 @@ import Impact from "./components/Impact";
 import Features from "./components/Features";
 import { useState } from "react";
 import Results from "./components/Results";
+import Info from "./components/Info";
+import Footer from "./components/Footer";
 
 function App() {
     const [query, setQuery] = useState("");
@@ -23,6 +25,8 @@ function App() {
             <Results response={response} />
             <Impact />
             <Features />
+            <Info />
+            <Footer />
         </>
     );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
 const Results = ({ response }) => {
+    console.log(response);
     let formattedResponse;
 
     try {
@@ -20,8 +21,7 @@ const Results = ({ response }) => {
         <div className="flex flex-col mx-5 lg:mx-10 rounded-xl p-7 lg:p-15">
             <h2 className="text-xl font-bold">Analysis Results</h2>
             <div className="text-gray-500">
-                Paste an article or enter a URL to analyze for bias and
-                credibility
+                Detailed breakdown of the article's credibility and bias
             </div>
             {formattedResponse && formattedResponse.sections ? (
                 <div className="border p-4 rounded-md shadow-md">

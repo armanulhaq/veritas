@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="font-serif text-4xl lg:text-8xl">
                     Truth in Every
                 </div>
-                <div className="text-6xl lg:text-8xl font-extrabold underline decoration-orange-800 underline-offset-15">
+                <div className="text-6xl lg:text-8xl font-extrabold underline decoration-orange-800 underline-offset-15 mb-5 lg:mb-10">
                     Headline
                 </div>
             </div>
