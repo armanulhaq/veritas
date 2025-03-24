@@ -8,7 +8,7 @@ const Features = () => {
     return (
         <div className="bg-[#f8f9fa] py-20">
             <div>
-                <div className="flex flex-col items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15  ">
+                <div className="flex flex-col items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15">
                     <div className="text-4xl font-serif font-bold">
                         Key Features
                     </div>

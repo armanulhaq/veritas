@@ -2,12 +2,12 @@ import React from "react";
 
 const Info = () => {
     return (
-        <div className="flex gap-10 mx-5 lg:mx-10 rounded-xl p-7 lg:p-15">
-            <div className="flex flex-col gap-4 justify-center w-[50%] p-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-sm lg:text-md mt-10">
+            <div className="flex flex-col gap-4 justify-center lg:w-[50%] lg:p-20 mb-5">
                 <h1 className="text-2xl font-bold font-serif">
                     Why Media Literacy Matters
                 </h1>
-                <p className="text-gray-400 text-lg">
+                <p className="text-gray-400 text-md lg:text-lg">
                     In today's information-rich environment, the ability to
                     critically evaluate news content is more important than
                     ever. Biased reporting can shape public opinion, influence
@@ -19,44 +19,52 @@ const Info = () => {
                     you become a more informed news consumer.
                 </p>
             </div>
-            <div className="flex flex-col gap-4 justify-center w-[50%] p-20">
-                <h1 className="text-2xl font-bold font-serif">
+            <div className="flex flex-col gap-4 justify-center lg:w-[50%] lg:p-20">
+                <h1 className="text-2xl  font-bold font-serif">
                     What should you do?
                 </h1>
-                <ul className="text-gray-400 text-lg">
-                    <li>
-                        <div className="text-black font-bold  font-serif">
+                <ul className="text-gray-400 gap-5 lg:gap-10 text-sm lg:text-lg flex flex-col">
+                    <li className="flex flex-col gap-1 lg:gap-3">
+                        <div className="text-black font-bold font-serif">
                             Be aware of your own biases
                         </div>
-                        We all have preconceptions that affect how we interpret
-                        information. Recognizing your own biases is the first
-                        step toward more objective evaluation.
+                        <div>
+                            We all have preconceptions that affect how we
+                            interpret information. Recognizing your own biases
+                            is the first step toward more objective evaluation.
+                        </div>
                     </li>
-                    <li>
-                        <div className="text-black font-bold  font-serif">
+                    <li className="flex flex-col gap-1 lg:gap-3">
+                        <div className="text-black font-bold font-serif">
                             Distinguish facts from opinions
                         </div>
-                        Pay attention to whether claims are supported by
-                        evidence or merely presented as assertions.
+                        <div>
+                            Pay attention to whether claims are supported by
+                            evidence or merely presented as assertions.
+                        </div>
                     </li>
 
-                    <li>
+                    <li className="flex flex-col gap-1 lg:gap-3">
                         {" "}
-                        <div className="text-black font-bold  font-serif">
+                        <div className="text-black font-bold font-serif">
                             Diversify your news sources
                         </div>
-                        Get information from multiple outlets with different
-                        perspectives to build a more complete picture of complex
-                        issues.
+                        <div>
+                            Get information from multiple outlets with different
+                            perspectives to build a more complete picture of
+                            complex issues.
+                        </div>
                     </li>
-                    <li>
+                    <li className="flex flex-col gap-1 lg:gap-3">
                         {" "}
-                        <div className="text-black font-bold  font-serif">
+                        <div className="text-black font-bold font-serif">
                             Consider what's not being said
                         </div>
-                        Sometimes what's omitted from a story is as important as
-                        what's included. Look for missing context or
-                        perspectives.
+                        <div>
+                            Sometimes what's omitted from a story is as
+                            important as what's included. Look for missing
+                            context or perspectives.
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -22,7 +22,7 @@ const Impact = () => {
                     </div>
                 </div>
                 <div className=" grid grid-col-1 lg:grid-cols-2 m-5 lg:mx-10 gap-8 rounded-xl p-2 lg:p-10">
-                    <div className="border-2 flex gap-4 px-10 py-15 rounded-xl ">
+                    <div className="border-2 flex gap-4 px-2 py-15 rounded-xl ">
                         <div className="bg-[#ffedd8] rounded-full w-fit h-fit p-5 lg-p-3">
                             <img
                                 className="w-20 lg-w-10"
