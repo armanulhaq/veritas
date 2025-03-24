@@ -18,7 +18,7 @@ const Analysis = ({ query, setQuery, setResponse }) => {
     };
 
     return (
-        <div className="flex justify-center mb-50">
+        <div className="flex items-center justify-center mb-50">
             <div className="m-5 lg:mx-10 rounded-xl flex flex-col gap-5 px-7 lg:px-15 lg:w-[60%] justify-center shadow-2xl p-6">
                 <div className="flex flex-col gap-1">
                     <div className="text-md lg:text-2xl font-bold">
@@ -43,7 +43,7 @@ const Analysis = ({ query, setQuery, setResponse }) => {
                     <div className="mt-4 flex justify-end">
                         <Button
                             onClick={handleSubmit}
-                            className="cursor-pointer text-xs bg-orange-800 text-white hover:bg-orange-900"
+                            className="cursor-pointer text-md bg-orange-800 text-white hover:bg-orange-900"
                         >
                             Analyse Article
                         </Button>

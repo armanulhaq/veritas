@@ -7,7 +7,7 @@ import activity from "../assets/health.svg";
 
 const Impact = () => {
     return (
-        <div className="bg-[#f8f9fa]">
+        <div>
             <div>
                 <div className="flex flex-col items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 ">
                     <div className="bg-[#ffedd8] w-fit rounded-full p-5">
@@ -22,7 +22,7 @@ const Impact = () => {
                     </div>
                 </div>
                 <div className=" grid grid-col-1 lg:grid-cols-2 m-5 lg:mx-10 gap-8 rounded-xl p-2 lg:p-10">
-                    <div className="border-2 flex gap-4 px-2 py-15 rounded-xl ">
+                    <div className="border-2 flex gap-4 px-10 py-15 rounded-xl ">
                         <div className="bg-[#ffedd8] rounded-full w-fit h-fit p-5 lg-p-3">
                             <img
                                 className="w-20 lg-w-10"
@@ -35,7 +35,7 @@ const Impact = () => {
                             <div className="font-serif font-bold text-xl">
                                 Societal Division
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-md">
+                            <div className="text-gray-500 text-sm lg:text-lg">
                                 False narratives drive wedges between
                                 communities, amplifying polarization and
                                 undermining social cohesion essential for
@@ -53,10 +53,10 @@ const Impact = () => {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <div className="font-serif font-bold text-xl">
+                            <div className="font-serif font-bold text-2xl">
                                 Democratic Deterioration
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-md">
+                            <div className="text-gray-500 text-sm lg:text-lg">
                                 Misinformation erodes public trust in
                                 institutions and the electoral process,
                                 threatening the foundations of democratic
@@ -74,10 +74,10 @@ const Impact = () => {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <div className="font-serif font-bold text-xl">
+                            <div className="font-serif font-bold text-2xl">
                                 Cognitive Manipulation
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-md">
+                            <div className="text-gray-500 text-sm lg:text-lg">
                                 Repeated exposure to falsehoods can rewire
                                 cognitive processing, making individuals
                                 susceptible to believing subsequent
@@ -95,10 +95,10 @@ const Impact = () => {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <div className="font-serif font-bold text-xl">
+                            <div className="font-serif font-bold text-2xl">
                                 Public Health Threats
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-md">
+                            <div className="text-gray-500 text-sm lg:text-lg">
                                 Misleading health information can lead to
                                 dangerous behaviors, rejection of life-saving
                                 treatments, and compromised community health.
@@ -108,7 +108,7 @@ const Impact = () => {
                 </div>
             </div>
             <div className="bg-gray-200 mx-5 lg:mx-20 rounded-xl px-7 lg:px-15 py-10">
-                <div className="text-sm lg:text-md">
+                <div className="text-sm lg:text-lg">
                     The spread of false information is one of the most urgent
                     threats facing our interconnected world. Combating this
                     threat requires not only technological solutions but also a
