@@ -19,7 +19,7 @@ const Analysis = ({ query, setQuery, setResponse }) => {
     };
 
     return (
-        <div className="h-[80vh] flex items-start justify-center">
+        <div className="h-[100vh] flex items-center justify-center">
             <div className="flex justify-center">
                 <div className="w-[90vw] lg:w-[60vw] shadow-lg rounded-4xl mx-5 py-10 lg:py-20">
                     <div className="flex flex-col justify-center items-center gap-5">
@@ -47,7 +47,7 @@ const Analysis = ({ query, setQuery, setResponse }) => {
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
                                 />
-                                <div className="text-[7px] lg:text-[10px] text-gray-500 px-5">
+                                <div className="text-[7px] lg:text-[11px] text-gray-500 px-5">
                                     Enter the direct URL to a news article. The
                                     content will be fetched and analyzed.
                                 </div>

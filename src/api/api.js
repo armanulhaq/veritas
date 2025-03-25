@@ -18,48 +18,71 @@ const analyzeNewsArticle = (articleText) => {
             messages: [
                 {
                     role: "user",
-                    content: `Analyze the following news article for bias:
+                    content: `Analyze the news article for bias.
 
-                    ${articleText}
+IMPORTANT FORMATTING INSTRUCTIONS:
+1. RESPOND ONLY WITH A VALID JSON
+2. DO NOT include any explanatory text before or after the JSON
+3. DO NOT use markdown, code blocks, or any additional formatting
+4. ENSURE the JSON is directly parseable by JSON.parse()
 
-                    Provide the response without any sources or formatting **strictly in the following JSON format**:
+Article Text:
+${articleText}
 
-                    {
-                        "sections": [
-                            {
-                                "title": "Source Reliability & Author Background",
-                                "content": "Evaluates the credibility of the source and author..."
-                            },
-                            {
-                                "title": "Language & Framing",
-                                "content": "Identifies emotionally charged words or bias in framing..."
-                            },
-                            {
-                                "title": "Presentation of Multiple Perspectives",
-                                "content": "Checks whether the article presents diverse viewpoints..."
-                            },
-                            {
-                                "title": "Context & Background Information",
-                                "content": "Assesses if the article provides enough historical context..."
-                            },
-                            {
-                                "title": "Potential Bias Indicators",
-                                "content": [
-                                    { "type": "Selection Bias", "details": "Facts may be selectively presented..." },
-                                    { "type": "Omission of Perspectives", "details": "Some perspectives might be ignored..." },
-                                    { "type": "Emphasis on Certain Facts", "details": "Specific facts may be overemphasized..." }
-                                ]
-                            },
-                            {
-                                "title": "Comparative Analysis",
-                                "content": "Compares claims with reputable sources..."
-                            },
-                            {
-                                "title": "Conclusion",
-                                "content": "Summarizes whether the article appears biased or balanced..."
-                            }
-                        ]
-                    }`,
+JSON RESPONSE FORMAT:
+{
+    "overallBiasScore": "Low/Moderate/High",
+    "credibilityRating": "Low/Medium/High",
+    "sections": [
+        {
+            "title": "Source Credibility",
+            "content": {
+                "sourceReputation": "String description",
+                "potentialBiasOrigins": "String explanation",
+                "factualConsistency": "String assessment"
+            }
+        },
+        {
+            "title": "Linguistic Bias Indicators",
+            "content": [
+                {
+                    "type": "Emotional Language/Framing Bias",
+                    "examples": ["Specific language examples"],
+                    "impact": "How language might influence perception"
+                }
+            ]
+        },
+        {
+            "title": "Perspective Analysis",
+            "content": {
+                "perspectiveCoverage": "Description of viewpoint breadth",
+                "missingPerspectives": ["List of perspectives not covered"],
+                "balanceScore": "Numerical score 1-10"
+            }
+        },
+        {
+            "title": "Bias Type Breakdown",
+            "content": [
+                {
+                    "type": "Selection Bias/Contextual Bias",
+                    "details": "Explanation of bias type",
+                    "severity": "Low/Moderate/High"
+                }
+            ]
+        },
+        {
+            "title": "Recommended Reader Approach",
+            "content": [
+                "Recommendation 1",
+                "Recommendation 2"
+            ]
+        }
+    ],
+    "conclusion": {
+        "summaryStatement": "Concise bias summary",
+        "readingRecommendation": "Advice for reading the article"
+    }
+}`,
                 },
             ],
         }),
