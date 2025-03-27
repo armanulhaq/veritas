@@ -10,13 +10,6 @@ const Impact = () => {
         <div className="mt-50 ">
             <div>
                 <div className="flex flex-col items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-5 ">
-                    <div className="w-fit rounded-full p-5">
-                        <img
-                            className="w-12 bg-[#faedcd]"
-                            src={alertImage}
-                            alt=""
-                        />
-                    </div>
                     <div className="text-5xl font- font-bold">
                         The Grave Consequences of Misinformation
                     </div>
@@ -26,10 +19,10 @@ const Impact = () => {
                     </div>
                 </div>
                 <div className=" grid grid-col-1 lg:grid-cols-2 m-5 lg:mx-10 gap-8 rounded-xl p-2 lg:p-10">
-                    <div className="border border-[#e0c9a6] flex gap-4 px-10 py-15 rounded-xl ">
-                        <div className="rounded-full w-fit h-fit p-5 lg-p-3">
+                    <div className="border border-[#e0c9a6] flex gap-4 px-5 py-7 lg:px-10 lg:py-15 rounded-xl ">
+                        <div className="rounded-full w-fit h-fit p-2 lg-p-3">
                             <img
-                                className="w-40 lg:w-20 bg-[#faedcd]"
+                                className="w-30 lg:w-20 bg-[#faedcd]"
                                 src={users}
                                 alt="users"
                             />
@@ -47,10 +40,10 @@ const Impact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="border border-[#e0c9a6] flex gap-4 px-10 py-15 rounded-xl bg-[#faedcd]">
-                        <div className="h-fit rounded-full p-5 lg:p-2">
+                    <div className="border border-[#e0c9a6] flex gap-4 px-5 py-7 lg:px-10 lg:py-15 rounded-xl bg-[#faedcd]">
+                        <div className="h-fit rounded-full p-2 lg:p-2">
                             <img
-                                className="w-40 lg:w-20 bg-[#faedcd]"
+                                className="w-30 lg:w-20 bg-[#faedcd]"
                                 src={globe}
                                 alt="users"
                             />
@@ -68,10 +61,10 @@ const Impact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="border border-[#e0c9a6] flex gap-4 px-10 py-15 rounded-xl bg-[#faedcd]">
-                        <div className="h-fit rounded-full p-5 lg:p-2">
+                    <div className="border border-[#e0c9a6] flex gap-4 px-5 py-7 lg:px-10 lg:py-15 rounded-xl bg-[#faedcd]">
+                        <div className="h-fit rounded-full p-2 lg:p-2">
                             <img
-                                className="w-40 lg:w-20 bg-[#faedcd]"
+                                className="w-30 lg:w-20 bg-[#faedcd]"
                                 src={sliders}
                                 alt="users"
                             />
@@ -89,10 +82,10 @@ const Impact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="border border-[#e0c9a6] flex gap-4 px-10 py-15 rounded-xl">
-                        <div className="h-fit rounded-full p-5 lg:p-2">
+                    <div className="border border-[#e0c9a6] flex gap-4 px-5 py-7 lg:px-10 lg:py-15 rounded-xl">
+                        <div className="h-fit rounded-full p-2 lg:p-2">
                             <img
-                                className="w-40 lg:w-20 bg-[#faedcd]"
+                                className="w-30 lg:w-20 bg-[#faedcd]"
                                 src={activity}
                                 alt="users"
                             />
@@ -113,13 +106,13 @@ const Impact = () => {
             </div>
             <div className="flex items-center justify-center my-10">
                 <div className="flex flex-col gap-5 w-[80vw] lg:w-[50%] border border-[#e0c9a6] bg-[#f3dcaf] lg:mx-60 rounded-xl p-10">
-                    <div className="text-lg bg-[#f3dcaf] font-serif">
+                    <blockquote className="italic text-lg bg-[#f3dcaf] font-serif">
                         The spread of false information is one of the most
                         urgent threats facing our interconnected world.
                         Combating this threat requires not only technological
                         solutions but also a commitment to media literacy and
                         critical thinking.
-                    </div>
+                    </blockquote>
                     <div className="font-bold font-serif flex justify-end text-md bg-[#f3dcaf]">
                         - World Freedom Index, 2023
                     </div>
