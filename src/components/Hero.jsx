@@ -5,7 +5,7 @@ import ai from "../assets/ai.png";
 const Hero = ({ scrollToAnalysis, scrollToImpact }) => {
     return (
         <div className="h-[90vh] lg:max-w-[70vw] flex flex-col px-5 md:px-10 lg:px-15 gap-5 lg:gap-10  justify-center">
-            <div className="w-fit border border-[#e0c9a6]  text-[#6c3d0f] text-xs lg:text-sm bg-[#faedcd] rounded-2xl px-3 flex items-center justify-between gap-1 py-1">
+            <div className="w-fit border border-[#e0c9a6]  text-xs lg:text-sm rounded-2xl px-3 flex items-center justify-between gap-1 py-1">
                 <img className="h-5 bg-[#faedcd]" src={ai} alt="" />
                 AI Powered News Verification
             </div>

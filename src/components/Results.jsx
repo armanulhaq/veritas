@@ -32,20 +32,20 @@ const Results = ({ response }) => {
 
     if (response) {
         return (
-            <div className="flex flex-col  items-center justify-center gap-1 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-sm lg:text-lg mt-10">
-                <div className="w-fit text-black text-xs lg:text-sm  rounded-2xl px-3 py-1 flex gap-1 bg-[#faedcd]  border border-[#e0c9a6] ">
-                    <div className="text-orange-900 bg-[#faedcd] ">
-                        <img className="h-5 bg-[#faedcd] " src={ai} alt="" />{" "}
+            <div className="flex flex-col  items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-lg mt-10">
+                <div className="w-fit text-black text-sm  rounded-2xl px-3 py-1 flex gap-1  border border-[#e0c9a6] ">
+                    <div className="text-orange-900 ">
+                        <img className="h-5 " src={ai} alt="" />{" "}
                     </div>
                     {""}
-                    <div className="bg-[#faedcd]">Analysis Report</div>
+                    <div className="flex items-center">Analysis Report</div>
                 </div>
-                <h2 className="text-4xl font-bold">Bias Analysis</h2>
-                <p>
+                <h2 className="text-5xl font-bold">Bias Analysis</h2>
+                <p className="text-center">
                     Detailed analysis of potential bias in media reporting and
                     content
                 </p>
-                <div className="w-[90vw] bg-[#faedcd]  border border-[#ddb892] lg:w-[30vw] rounded-4xl mx-5 flex flex-col items-center gap-5 px-3 py-5 lg:py-10 my-5">
+                <div className="w-[80vw]  border border-[#ddb892] lg:w-[30vw] rounded-4xl mx-5 flex flex-col items-center gap-5 py-10 my-5">
                     <div className="text-3xl text-[#6c3d0f] font-black bg-[#faedcd]">
                         Overall Assessment
                     </div>
@@ -54,7 +54,7 @@ const Results = ({ response }) => {
                             <p className="bg-[#faedcd]">
                                 <strong>Overall Bias Score:</strong>{" "}
                             </p>
-                            <div className="underline decoration-[#6c3d0f] bg-[#faedcd] underline-offset-5 decoration-4">
+                            <div className="underline decoration-[#6c3d0f] underline-offset-5 decoration-4">
                                 {overallBiasScore}
                             </div>
                         </div>
@@ -74,7 +74,7 @@ const Results = ({ response }) => {
                     {sections?.map((section, index) => (
                         <div
                             key={index}
-                            className="p-10 rounded-4xl bg-[#faedcd] flex flex-col items-center justify-center  border border-[#ddb892]"
+                            className="p-10 rounded-4xl flex flex-col items-center justify-center  border border-[#ddb892]"
                         >
                             <h3 className="text-2xl font-2xl mb-3 text-[#6c3d0f] font-black bg-[#faedcd]">
                                 {section.title}
@@ -125,7 +125,7 @@ const Results = ({ response }) => {
                     ))}
                 </div>
 
-                <div className="bg-[#faedcd] border border-[#ddb892] mt-4 p-10 rounded-4xl flex flex-col items-center gap-2 justify-center   lg:w-[40vw] ">
+                <div className="border border-[#ddb892] mt-4 p-10 rounded-4xl flex flex-col items-center gap-2 justify-center   lg:w-[40vw] ">
                     <h3 className="font-black text-3xl text-[#6c3d0f] bg-[#faedcd]">
                         Conclusion
                     </h3>
