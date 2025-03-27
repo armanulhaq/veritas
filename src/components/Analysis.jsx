@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import analyzeNewsArticle from "@/api/api";
 import ai from "../assets/ai.png";
 
 const Analysis = ({ query, setQuery, setResponse }) => {
+    const [loading, setLoading] = useState(false);
     const handleSubmit = async () => {
+        setLoading(true); // Start loading
         try {
             const result = await analyzeNewsArticle(query);
             const response = await result.json();
@@ -15,11 +17,13 @@ const Analysis = ({ query, setQuery, setResponse }) => {
         } catch (error) {
             console.error("Error analyzing article:", error);
             setResponse("Failed to analyze the article. Please try again.");
+        } finally {
+            setLoading(false); // Stop loading after response
         }
     };
 
     return (
-        <div className="h-[100vh] flex items-center justify-center">
+        <div className="h-[50vh] flex items-center justify-center">
             <div className="flex justify-center">
                 <div className="w-[90vw] lg:w-[60vw] shadow-lg rounded-4xl mx-5 py-10 lg:py-20">
                     <div className="flex flex-col justify-center items-center gap-5">
@@ -56,9 +60,21 @@ const Analysis = ({ query, setQuery, setResponse }) => {
                             <div className="flex justify-end">
                                 <Button
                                     onClick={handleSubmit}
-                                    className="cursor-pointer text-md bg-orange-800 text-white hover:bg-orange-900 py-5 lg:py-7 px-3 lg:px-5 rounded-4xl"
+                                    disabled={loading} // Disable when loading
+                                    className={`cursor-pointer text-md bg-orange-800 text-white hover:bg-orange-900 py-5 lg:py-7 px-3 lg:px-5 rounded-4xl ${
+                                        loading
+                                            ? "opacity-50 cursor-not-allowed"
+                                            : ""
+                                    }`}
                                 >
-                                    Analyse Article
+                                    {loading ? (
+                                        <div className="flex items-center gap-2">
+                                            <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
+                                            Analysing...
+                                        </div>
+                                    ) : (
+                                        "Analyse Article"
+                                    )}
                                 </Button>
                             </div>
                         </div>

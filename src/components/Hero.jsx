@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 
-const Hero = () => {
+const Hero = ({ scrollToAnalysis, scrollToImpact }) => {
     return (
         <div className="h-[90vh] lg:max-w-[80vw] flex flex-col px-5 md:px-10 lg:px-15 gap-5 lg:gap-10  justify-center">
             <div className="w-fit text-black text-xs lg:text-sm bg-[#ffedd8] rounded-2xl px-3 py-1">
@@ -9,23 +9,29 @@ const Hero = () => {
                 Verification
             </div>
             <div>
-                <div className="font-serif text-4xl lg:text-8xl">
+                <div className="text- text-4xl lg:text-7xl font-semibold">
                     Truth in Every
                 </div>
-                <div className="text-6xl lg:text-8xl font-extrabold underline decoration-orange-800 underline-offset-15 mb-5 lg:mb-10">
+                <div className="text-6xl lg:text-8xl font-black underline decoration-orange-800 underline-offset-15 mb-5 lg:mb-10">
                     Headline
                 </div>
             </div>
-            <div className="text-gray-500 text-sm lg:text-lg font-serif">
+            <div className="text-gray-500 text-sm lg:text-lg ">
                 Verify the credibility of any news article with our
                 sophisticated Al analysis that detects bias, checks facts, and
                 provides balanced context for informed reading.
             </div>
             <div className="flex gap-5">
-                <Button className="cursor-pointer text-xs lg:h-13 lg:text-lg bg-orange-800 text-white hover:bg-orange-900">
+                <Button
+                    onClick={scrollToAnalysis}
+                    className="cursor-pointer text-xs lg:h-13 lg:text-lg bg-orange-800 text-white hover:bg-orange-900"
+                >
                     Analyse an article
                 </Button>
-                <Button className="bg-gray-200 text-xs lg:h-13 lg:text-lg text-black">
+                <Button
+                    onClick={scrollToImpact}
+                    className="bg-gray-200 text-xs lg:h-13 lg:text-lg text-black"
+                >
                     Learn More
                 </Button>
             </div>

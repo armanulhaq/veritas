@@ -9,11 +9,11 @@ const Impact = () => {
     return (
         <div>
             <div>
-                <div className="flex flex-col items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 ">
+                <div className="flex flex-col items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-5 ">
                     <div className="bg-[#ffedd8] w-fit rounded-full p-5">
                         <img className="w-12" src={alertImage} alt="" />
                     </div>
-                    <div className="text-2xl font-serif font-bold">
+                    <div className="text-2xl font- font-bold">
                         The Grave Consequences of Misinformation
                     </div>
                     <div className="text-gray-500 ">
@@ -32,7 +32,7 @@ const Impact = () => {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <div className="font-serif font-bold text-xl">
+                            <div className="font-bold text-2xl">
                                 Societal Division
                             </div>
                             <div className="text-gray-500 text-sm lg:text-lg">
@@ -53,7 +53,7 @@ const Impact = () => {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <div className="font-serif font-bold text-2xl">
+                            <div className="font-bold text-2xl">
                                 Democratic Deterioration
                             </div>
                             <div className="text-gray-500 text-sm lg:text-lg">
@@ -74,7 +74,7 @@ const Impact = () => {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <div className="font-serif font-bold text-2xl">
+                            <div className="font-bold text-2xl">
                                 Cognitive Manipulation
                             </div>
                             <div className="text-gray-500 text-sm lg:text-lg">
@@ -95,7 +95,7 @@ const Impact = () => {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <div className="font-serif font-bold text-2xl">
+                            <div className="font-bold text-2xl">
                                 Public Health Threats
                             </div>
                             <div className="text-gray-500 text-sm lg:text-lg">
@@ -107,14 +107,14 @@ const Impact = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-gray-200 mx-5 lg:mx-20 rounded-xl px-7 lg:px-15 py-10">
+            <div className="bg-gray-200 mx-5 lg:mx-60 rounded-xl px-7 lg:px-15 py-5 shadow-xl">
                 <div className="text-sm lg:text-lg">
                     The spread of false information is one of the most urgent
                     threats facing our interconnected world. Combating this
                     threat requires not only technological solutions but also a
                     commitment to media literacy and critical thinking.
                 </div>
-                <div className="font-serif flex justify-end text-sm lg:text-md">
+                <div className="font- flex justify-end text-sm lg:text-md">
                     -World Freedom Index, 2023
                 </div>
             </div>

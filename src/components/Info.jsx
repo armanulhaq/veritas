@@ -4,7 +4,7 @@ const Info = () => {
     return (
         <div className="flex flex-col lg:flex-row items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-sm lg:text-md mt-10">
             <div className="flex flex-col gap-4 justify-center lg:w-[50%] lg:p-20 mb-5">
-                <h1 className="text-xl lg:text-5xl font-bold font-serif">
+                <h1 className="text-2xl lg:text-5xl font-bold font-">
                     Why Media Literacy Matters
                 </h1>
                 <p className="text-gray-400 text-md lg:text-lg">
@@ -20,12 +20,12 @@ const Info = () => {
                 </p>
             </div>
             <div className="flex flex-col gap-4 justify-center lg:w-[50%] lg:p-20">
-                <h1 className="text-3xl font-bold font-serif">
+                <h1 className="text-2xl lg:text-5xl font-bold font-">
                     What should you do?
                 </h1>
                 <ul className="text-gray-400 gap-5 lg:gap-10 text-sm lg:text-lg flex flex-col">
                     <li className="flex flex-col gap-1 lg:gap-3">
-                        <div className="text-black font-bold font-serif">
+                        <div className="text-black font-bold font-">
                             Be aware of your own biases
                         </div>
                         <div>
@@ -35,7 +35,7 @@ const Info = () => {
                         </div>
                     </li>
                     <li className="flex flex-col gap-1 lg:gap-3">
-                        <div className="text-black font-bold font-serif">
+                        <div className="text-black font-bold font-">
                             Distinguish facts from opinions
                         </div>
                         <div>
@@ -46,7 +46,7 @@ const Info = () => {
 
                     <li className="flex flex-col gap-1 lg:gap-3">
                         {" "}
-                        <div className="text-black font-bold font-serif">
+                        <div className="text-black font-bold font-">
                             Diversify your news sources
                         </div>
                         <div>
@@ -57,7 +57,7 @@ const Info = () => {
                     </li>
                     <li className="flex flex-col gap-1 lg:gap-3">
                         {" "}
-                        <div className="text-black font-bold font-serif">
+                        <div className="text-black font-bold font-">
                             Consider what's not being said
                         </div>
                         <div>

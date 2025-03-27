@@ -32,7 +32,7 @@ const Results = ({ response }) => {
 
     if (response) {
         return (
-            <div className="flex flex-col  items-center justify-center gap-5 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-sm lg:text-lg mt-10">
+            <div className="flex flex-col  items-center justify-center gap-5 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 pb-10 text-sm lg:text-lg mt-10">
                 <div className="w-fit text-black text-xs lg:text-sm bg-[#ffedd8] rounded-2xl px-3 py-1 flex gap-1">
                     <div className="text-orange-900">
                         <img className="h-5" src={ai} alt="" />{" "}

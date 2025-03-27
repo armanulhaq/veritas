@@ -57,7 +57,7 @@ JSON RESPONSE FORMAT:
             "content": {
                 "perspectiveCoverage": "Description of viewpoint breadth",
                 "missingPerspectives": ["List of perspectives not covered"],
-                "balanceScore": "Numerical score 1-10"
+
             }
         },
         {
