@@ -1,12 +1,58 @@
-# React + Vite
+# Veritas - AI-Powered Media Bias Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **Open-source AI-powered media bias analyzer** for evaluating news credibility and misinformation.
 
-Currently, two official plugins are available:
+## 🌟 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Veritas is an AI-driven platform designed to analyze media articles for bias, misinformation, and credibility. Veritas provides insights into:
 
-## Expanding the ESLint configuration
+-   Sentiment and tone of news articles.
+-   Political bias and leanings.
+-   Fact-checking credibility indicators.
+-   Source reliability.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔥 Features
+
+-   **AI-Powered Analysis**: Uses advanced NLP to detect bias and credibility.
+-   **Multi-Language Support**: Analyzes news in various languages.
+-   **User-Friendly Interface**: Easy-to-use web interface for analyzing articles.
+
+## 🛠️ Tech Stack
+
+-   **Frontend**: React.js
+-   **Backend**: Node.js / Axios / Sonar
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/armanulhaq/veritas.git
+cd veritas
+```
+
+### 2️⃣ Install Dependencies
+
+```sh
+npm i
+```
+
+### 3️⃣ Run the Application
+
+```sh
+npm run dev
+```
+
+## 🌍 Contributing
+
+Veritas is an **open-source project**, and we welcome contributions! To contribute:
+
+1. Fork the repo and create a new branch.
+2. Implement your changes and commit them.
+3. Submit a Pull Request (PR).
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+📢 _Help us build a world with unbiased news consumption!_ 🚀
