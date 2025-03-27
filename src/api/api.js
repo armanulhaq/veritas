@@ -2,7 +2,7 @@ const analyzeNewsArticle = (articleText) => {
     const options = {
         method: "POST",
         headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_PERPLEXITY_API_KEY}`, // Ensure the key is correctly set in env
+            Authorization: `Bearer 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`, // Ensure the key is correctly set in env
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
