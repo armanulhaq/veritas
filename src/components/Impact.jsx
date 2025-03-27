@@ -1,5 +1,4 @@
 import React from "react";
-import alertImage from "../assets/danger.svg";
 import users from "../assets/users.svg";
 import globe from "../assets/globe.svg";
 import sliders from "../assets/sliders.svg";
@@ -28,7 +27,7 @@ const Impact = () => {
                             />
                         </div>
 
-                        <div className="flex flex-col gap-1 bg-[#faedcd]">
+                        <div className="flex flex-col gap-1 bg-[#faedcd] ">
                             <div className="font-bold text-2xl bg-[#faedcd]">
                                 Societal Division
                             </div>

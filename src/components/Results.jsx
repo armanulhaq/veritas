@@ -45,53 +45,55 @@ const Results = ({ response }) => {
                     Detailed analysis of potential bias in media reporting and
                     content
                 </p>
-                <div className="w-[80vw]  border border-[#ddb892] lg:w-[30vw] rounded-4xl mx-5 flex flex-col items-center gap-5 py-10 my-5">
-                    <div className="text-3xl text-[#6c3d0f] font-black bg-[#faedcd]">
+                <div className="w-[80vw]  border border-[#ddb892] lg:w-[30vw] rounded-4xl mx-5 flex flex-col items-center gap-5 py-10 my-5 bg-[#f3dcaf]">
+                    <div className="text-3xl text-[#6c3d0f] font-black  bg-[#f3dcaf]">
                         Overall Assessment
                     </div>
-                    <div className="flex flex-col gap-2 bg-[#faedcd]">
-                        <div className="flex gap-2 bg-[#faedcd]">
-                            <p className="bg-[#faedcd]">
-                                <strong>Overall Bias Score:</strong>{" "}
+                    <div className="flex flex-col gap-2 bg-[#f3dcaf]">
+                        <div className="flex gap-2 bg-[#f3dcaf]">
+                            <p className="bg-[#f3dcaf]">
+                                <strong className="bg-[#f3dcaf]">
+                                    Overall Bias Score:
+                                </strong>{" "}
                             </p>
-                            <div className="underline decoration-[#6c3d0f] underline-offset-5 decoration-4">
+                            <div className="underline decoration-[#6c3d0f] underline-offset-5 decoration-4 bg-[#f3dcaf]">
                                 {overallBiasScore}
                             </div>
                         </div>
 
-                        <div className="flex gap-2">
-                            <p className="bg-[#faedcd]">
-                                <strong>Credibility Rating:</strong>{" "}
+                        <div className="flex gap-2 bg-[#f3dcaf]">
+                            <p className="bg-[#f3dcaf]">
+                                <strong className="bg-[#f3dcaf]">
+                                    Credibility Rating:
+                                </strong>{" "}
                             </p>
-                            <div className="underline decoration-[#6c3d0f] underline-offset-5 decoration-4">
+                            <div className="underline decoration-[#6c3d0f] underline-offset-5 decoration-4 bg-[#f3dcaf]">
                                 {credibilityRating}
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 ">
                     {sections?.map((section, index) => (
                         <div
                             key={index}
-                            className="p-10 rounded-4xl flex flex-col items-center justify-center  border border-[#ddb892]"
+                            className="p-10 rounded-xl flex flex-col items-center justify-center  border border-[#ddb892] bg-[#f3dcaf]"
                         >
-                            <h3 className="text-2xl font-2xl mb-3 text-[#6c3d0f] font-black bg-[#faedcd]">
+                            <div className="text-2xl font-2xl mb-3 text-[#6c3d0f] font-black bg-[#f3dcaf]">
                                 {section.title}
-                            </h3>
+                            </div>
                             {typeof section.content === "string" ? (
-                                <p className="bg-[#faedcd]">
-                                    {section.content}
-                                </p>
+                                <p>{section.content}</p>
                             ) : Array.isArray(section.content) ? (
-                                <ul className="bg-[#faedcd]">
+                                <ul className="bg-[#f3dcaf]">
                                     {section.content.map((item, i) => (
-                                        <li key={i} className="bg-[#faedcd]">
+                                        <li key={i} className="bg-[#f3dcaf]">
                                             {typeof item === "string" ? (
                                                 capitalizeFirstLetter(item)
                                             ) : (
-                                                <div className="bg-[#faedcd]">
-                                                    <strong>
+                                                <div className="bg-[#f3dcaf]">
+                                                    <strong className="bg-[#f3dcaf]">
                                                         {capitalizeFirstLetter(
                                                             item.type
                                                         )}
@@ -108,8 +110,8 @@ const Results = ({ response }) => {
                                 <div>
                                     {Object.entries(section.content).map(
                                         ([key, value], i) => (
-                                            <p key={i} className="bg-[#faedcd]">
-                                                <strong>
+                                            <p key={i} className="bg-[#f3dcaf]">
+                                                <strong className="bg-[#f3dcaf]">
                                                     {capitalizeFirstLetter(key)}
                                                     :
                                                 </strong>{" "}
@@ -125,17 +127,19 @@ const Results = ({ response }) => {
                     ))}
                 </div>
 
-                <div className="border border-[#ddb892] mt-4 p-10 rounded-4xl flex flex-col items-center gap-2 justify-center   lg:w-[40vw] ">
-                    <h3 className="font-black text-3xl text-[#6c3d0f] bg-[#faedcd]">
+                <div className="bg-[#f3dcaf] border border-[#ddb892] mt-4 p-10 rounded-4xl flex flex-col items-center gap-2 justify-center   lg:w-[40vw] ">
+                    <h3 className="font-black text-3xl text-[#6c3d0f] bg-[#f3dcaf]">
                         Conclusion
                     </h3>
                     <div>
-                        <p className="bg-[#faedcd]">
-                            <strong className="bg-[#faedcd]">Summary:</strong>{" "}
+                        <p className="bg-[#f3dcaf]">
+                            <strong className="bg-[#f3dcaf]">Summary:</strong>{" "}
                             {conclusion?.summaryStatement}
                         </p>
-                        <p className="bg-[#faedcd]">
-                            <strong>Recommendation:</strong>{" "}
+                        <p className="bg-[#f3dcaf]">
+                            <strong className="bg-[#f3dcaf]">
+                                Recommendation:
+                            </strong>{" "}
                             {conclusion?.readingRecommendation}
                         </p>
                     </div>

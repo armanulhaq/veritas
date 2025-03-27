@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className="flex justify-between w-[100%] lg:w-[50%]">
                     <div className="w-[50%] flex lg:justify-end">
                         <ul>
-                            <div className="text-black mb-2 font-serif font-bold">
+                            <div className="text-black mb-2 font-bold">
                                 Navigation
                             </div>
                             <li className="cursor-pointer">Home</li>
@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
                     <div className="w-[50%] flex justify-end">
                         <ul>
-                            <div className="text-black mb-2 font-serif font-bold">
+                            <div className="text-black mb-2  font-bold">
                                 Legal
                             </div>
                             <li className="cursor-pointer">Privacy Policy</li>
