@@ -32,54 +32,65 @@ const Results = ({ response }) => {
 
     if (response) {
         return (
-            <div className="flex flex-col  items-center justify-center gap-5 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 pb-10 text-sm lg:text-lg mt-10">
-                <div className="w-fit text-black text-xs lg:text-sm bg-[#ffedd8] rounded-2xl px-3 py-1 flex gap-1">
-                    <div className="text-orange-900">
-                        <img className="h-5" src={ai} alt="" />{" "}
+            <div className="flex flex-col  items-center justify-center gap-1 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-sm lg:text-lg mt-10">
+                <div className="w-fit text-black text-xs lg:text-sm  rounded-2xl px-3 py-1 flex gap-1 bg-[#faedcd]  border border-[#e0c9a6] ">
+                    <div className="text-orange-900 bg-[#faedcd] ">
+                        <img className="h-5 bg-[#faedcd] " src={ai} alt="" />{" "}
                     </div>
                     {""}
-                    <div>Analysis Report</div>
+                    <div className="bg-[#faedcd]">Analysis Report</div>
                 </div>
                 <h2 className="text-4xl font-bold">Bias Analysis</h2>
-                <p className="text-gray-400">
+                <p>
                     Detailed analysis of potential bias in media reporting and
                     content
                 </p>
-                <div className="w-[90vw] lg:w-[30vw] shadow-sm rounded-4xl mx-5 flex flex-col items-center gap-5 px-3 py-5 lg:py-10">
-                    <div className="text-3xl font-semibold">
+                <div className="w-[90vw] bg-[#faedcd]  border border-[#ddb892] lg:w-[30vw] rounded-4xl mx-5 flex flex-col items-center gap-5 px-3 py-5 lg:py-10 my-5">
+                    <div className="text-3xl text-[#6c3d0f] font-black bg-[#faedcd]">
                         Overall Assessment
                     </div>
-                    <div className="flex flex-col gap-2">
-                        <p>
-                            <strong>Overall Bias Score:</strong>{" "}
-                            {overallBiasScore}
-                        </p>
-                        <p>
-                            <strong>Credibility Rating:</strong>{" "}
-                            {credibilityRating}
-                        </p>
+                    <div className="flex flex-col gap-2 bg-[#faedcd]">
+                        <div className="flex gap-2 bg-[#faedcd]">
+                            <p className="bg-[#faedcd]">
+                                <strong>Overall Bias Score:</strong>{" "}
+                            </p>
+                            <div className="underline decoration-[#6c3d0f] bg-[#faedcd] underline-offset-5 decoration-4">
+                                {overallBiasScore}
+                            </div>
+                        </div>
+
+                        <div className="flex gap-2">
+                            <p className="bg-[#faedcd]">
+                                <strong>Credibility Rating:</strong>{" "}
+                            </p>
+                            <div className="underline decoration-[#6c3d0f] underline-offset-5 decoration-4">
+                                {credibilityRating}
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {sections?.map((section, index) => (
                         <div
                             key={index}
-                            className="p-10 bg-[#ffedd8] rounded-4xl shadow-sm"
+                            className="p-10 rounded-4xl bg-[#faedcd] flex flex-col items-center justify-center  border border-[#ddb892]"
                         >
-                            <h3 className="text-2xl font-bold font-serif mb-3">
+                            <h3 className="text-2xl font-2xl mb-3 text-[#6c3d0f] font-black bg-[#faedcd]">
                                 {section.title}
                             </h3>
                             {typeof section.content === "string" ? (
-                                <p>{section.content}</p>
+                                <p className="bg-[#faedcd]">
+                                    {section.content}
+                                </p>
                             ) : Array.isArray(section.content) ? (
-                                <ul>
+                                <ul className="bg-[#faedcd]">
                                     {section.content.map((item, i) => (
-                                        <li key={i}>
+                                        <li key={i} className="bg-[#faedcd]">
                                             {typeof item === "string" ? (
                                                 capitalizeFirstLetter(item)
                                             ) : (
-                                                <div>
+                                                <div className="bg-[#faedcd]">
                                                     <strong>
                                                         {capitalizeFirstLetter(
                                                             item.type
@@ -97,7 +108,7 @@ const Results = ({ response }) => {
                                 <div>
                                     {Object.entries(section.content).map(
                                         ([key, value], i) => (
-                                            <p key={i}>
+                                            <p key={i} className="bg-[#faedcd]">
                                                 <strong>
                                                     {capitalizeFirstLetter(key)}
                                                     :
@@ -114,15 +125,20 @@ const Results = ({ response }) => {
                     ))}
                 </div>
 
-                <div className="bg-[#ffedd8] mt-4 p-10 rounded-4xl shadow-sm">
-                    <h3 className="font-semibold">Conclusion</h3>
-                    <p>
-                        <strong>Summary:</strong> {conclusion?.summaryStatement}
-                    </p>
-                    <p>
-                        <strong>Recommendation:</strong>{" "}
-                        {conclusion?.readingRecommendation}
-                    </p>
+                <div className="bg-[#faedcd] border border-[#ddb892] mt-4 p-10 rounded-4xl flex flex-col items-center gap-2 justify-center   lg:w-[40vw] ">
+                    <h3 className="font-black text-3xl text-[#6c3d0f] bg-[#faedcd]">
+                        Conclusion
+                    </h3>
+                    <div>
+                        <p className="bg-[#faedcd]">
+                            <strong className="bg-[#faedcd]">Summary:</strong>{" "}
+                            {conclusion?.summaryStatement}
+                        </p>
+                        <p className="bg-[#faedcd]">
+                            <strong>Recommendation:</strong>{" "}
+                            {conclusion?.readingRecommendation}
+                        </p>
+                    </div>
                 </div>
             </div>
         );

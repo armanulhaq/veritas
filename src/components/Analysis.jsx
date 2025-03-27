@@ -25,52 +25,60 @@ const Analysis = ({ query, setQuery, setResponse }) => {
     return (
         <div className="h-[50vh] flex items-center justify-center">
             <div className="flex justify-center">
-                <div className="w-[90vw] lg:w-[60vw] shadow-lg rounded-4xl mx-5 py-10 lg:py-20">
-                    <div className="flex flex-col justify-center items-center gap-5">
-                        <div className="w-fit text-black text-xs lg:text-sm bg-[#ffedd8] rounded-2xl px-3 py-1 flex gap-1">
-                            <div className="text-orange-900">
-                                <img className="h-5" src={ai} alt="" />{" "}
+                <div className="w-[90vw] lg:w-[60vw] rounded-4xl mx-5 py-10 lg:py-20  bg-[#faedcd] border border-[#e0c9a6]">
+                    <div className="flex flex-col justify-center items-center bg-[#faedcd] gap-5">
+                        <div className="w-fit text-black text-xs lg:text-sm bg-[#faedcd] rounded-2xl px-3 py-1 flex gap-1  border border-[#e0c9a6]">
+                            <div className="text-orange-900 bg-[#F7F2E4]">
+                                <img
+                                    className="h-5 bg-[#faedcd]"
+                                    src={ai}
+                                    alt=""
+                                />{" "}
                             </div>
                             {""}
-                            <div>AI-powered news analysis</div>
+                            <div className="bg-[#faedcd]">
+                                AI-powered news analysis
+                            </div>
                         </div>
-                        <div className="flex gap-1 text-lg flex-col items-center text-center">
-                            <div className="text-2xl lg:text-3xl font-bold">
+                        <div className="flex gap-1 text-lg flex-col items-center text-center bg-[#faedcd]">
+                            <div className="text-2xl lg:text-3xl font-bold bg-[#faedcd]">
                                 Analyze News Article{" "}
                             </div>
-                            <div className="text-gray-400 text-sm lg:text-lg px-4">
+                            <div className=" text-sm lg:text-lg px-4">
                                 Enter the URL of a news article to analyze it
                                 for bias, credibility, and balanced reporting.
                             </div>
                         </div>
-                        <div className="w-[100%] lg:w-[90%] px-4 flex flex-col sm:flex-row gap-4 justify-center">
-                            <div className="flex flex-col w-[100%]">
+                        <div className="w-[100%] lg:w-[90%] px-4 flex flex-col sm:flex-row gap-4 justify-center bg-[#faedcd]">
+                            <div className="flex flex-col w-[100%] bg-[#faedcd]">
                                 <Input
-                                    className="bg-white h-15 w-[100%]  rounded-3xl text-sm lg:text-md py-3 md:py-5 lg:py-7 px-3 lg:px-5"
+                                    className="bg-[#f4f3ee] border border-[#e0c9a6] h-15 w-[100%]  rounded-lg text-sm lg:text-md py-3 md:py-5 lg:py-7 px-3 lg:px-5"
                                     placeholder="https://example.com/news-article"
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
                                 />
-                                <div className="text-[7px] lg:text-[11px] text-gray-500 px-5">
+                                <div className="text-[7px] lg:text-[11px] px-5 mt-1 bg-[#faedcd]">
                                     Enter the direct URL to a news article. The
                                     content will be fetched and analyzed.
                                 </div>
                             </div>
 
-                            <div className="flex justify-end">
+                            <div className="flex justify-end bg-[#faedcd]">
                                 <Button
                                     onClick={handleSubmit}
                                     disabled={loading} // Disable when loading
-                                    className={`cursor-pointer text-md bg-orange-800 text-white hover:bg-orange-900 py-5 lg:py-7 px-3 lg:px-5 rounded-4xl ${
+                                    className={`cursor-pointer text-md  bg-[#6c3d0f] text-white py-5 lg:py-7 px-3 lg:px-5 rounded-4xl ${
                                         loading
                                             ? "opacity-50 cursor-not-allowed"
                                             : ""
                                     }`}
                                 >
                                     {loading ? (
-                                        <div className="flex items-center gap-2">
-                                            <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
-                                            Analysing...
+                                        <div className="flex items-center gap-2 text-black  bg-[#6c3d0f]">
+                                            <span className="animate-spin  bg-[#6c3d0f] h-5 w-5 border-2 border-white t rounded-full"></span>
+                                            <div className="bg-[#6c3d0f] text-white">
+                                                Analysing...
+                                            </div>
                                         </div>
                                     ) : (
                                         "Analyse Article"

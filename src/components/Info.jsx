@@ -2,12 +2,12 @@ import React from "react";
 
 const Info = () => {
     return (
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-sm lg:text-md mt-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-sm lg:text-md mt-10 ">
             <div className="flex flex-col gap-4 justify-center lg:w-[50%] lg:p-20 mb-5">
                 <h1 className="text-2xl lg:text-5xl font-bold font-">
                     Why Media Literacy Matters
                 </h1>
-                <p className="text-gray-400 text-md lg:text-lg">
+                <p className=" text-md lg:text-lg">
                     In today's information-rich environment, the ability to
                     critically evaluate news content is more important than
                     ever. Biased reporting can shape public opinion, influence
@@ -23,9 +23,9 @@ const Info = () => {
                 <h1 className="text-2xl lg:text-5xl font-bold font-">
                     What should you do?
                 </h1>
-                <ul className="text-gray-400 gap-5 lg:gap-10 text-sm lg:text-lg flex flex-col">
-                    <li className="flex flex-col gap-1 lg:gap-3">
-                        <div className="text-black font-bold font-">
+                <ul className=" gap-5 lg:gap-10 text-sm lg:text-lg flex flex-col">
+                    <li className="flex flex-col gap-1">
+                        <div className="font-bold text-lg lg:text-xl">
                             Be aware of your own biases
                         </div>
                         <div>
@@ -34,8 +34,8 @@ const Info = () => {
                             is the first step toward more objective evaluation.
                         </div>
                     </li>
-                    <li className="flex flex-col gap-1 lg:gap-3">
-                        <div className="text-black font-bold font-">
+                    <li className="flex flex-col gap-1">
+                        <div className="font-bold text-lg lg:text-xl">
                             Distinguish facts from opinions
                         </div>
                         <div>
@@ -44,9 +44,9 @@ const Info = () => {
                         </div>
                     </li>
 
-                    <li className="flex flex-col gap-1 lg:gap-3">
+                    <li className="flex flex-col gap-1">
                         {" "}
-                        <div className="text-black font-bold font-">
+                        <div className="font-bold text-lg lg:text-xl">
                             Diversify your news sources
                         </div>
                         <div>
@@ -55,9 +55,9 @@ const Info = () => {
                             complex issues.
                         </div>
                     </li>
-                    <li className="flex flex-col gap-1 lg:gap-3">
+                    <li className="flex flex-col gap-1">
                         {" "}
-                        <div className="text-black font-bold font-">
+                        <div className=" font-bold text-lg lg:text-xl">
                             Consider what's not being said
                         </div>
                         <div>

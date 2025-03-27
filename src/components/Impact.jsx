@@ -7,35 +7,39 @@ import activity from "../assets/health.svg";
 
 const Impact = () => {
     return (
-        <div>
+        <div className="mt-50 ">
             <div>
                 <div className="flex flex-col items-center justify-center gap-3 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-5 ">
-                    <div className="bg-[#ffedd8] w-fit rounded-full p-5">
-                        <img className="w-12" src={alertImage} alt="" />
+                    <div className="bg-[#faedcd] w-fit rounded-full p-5">
+                        <img
+                            className="w-12 bg-[#faedcd]"
+                            src={alertImage}
+                            alt=""
+                        />
                     </div>
-                    <div className="text-2xl font- font-bold">
+                    <div className="text-5xl font- font-bold">
                         The Grave Consequences of Misinformation
                     </div>
-                    <div className="text-gray-500 ">
+                    <div className="text-lg">
                         False information isn't merely incorrect-it's actively
                         harmful to individuals and societies in profound ways.
                     </div>
                 </div>
                 <div className=" grid grid-col-1 lg:grid-cols-2 m-5 lg:mx-10 gap-8 rounded-xl p-2 lg:p-10">
-                    <div className="border-2 flex gap-4 px-10 py-15 rounded-xl ">
-                        <div className="bg-[#ffedd8] rounded-full w-fit h-fit p-5 lg-p-3">
+                    <div className="border bg-[#faedcd] border-[#e0c9a6] flex gap-4 px-10 py-15 rounded-xl ">
+                        <div className="bg-[#faedcd] rounded-full w-fit h-fit p-5 lg-p-3">
                             <img
-                                className="w-20 lg-w-10"
+                                className="w-20 lg-w-10 bg-[#faedcd]"
                                 src={users}
                                 alt="users"
                             />
                         </div>
 
-                        <div className="flex flex-col gap-1">
-                            <div className="font-bold text-2xl">
+                        <div className="flex flex-col gap-1 bg-[#faedcd]">
+                            <div className="font-bold text-2xl bg-[#faedcd]">
                                 Societal Division
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-lg">
+                            <div className=" text-sm lg:text-lg bg-[#faedcd]">
                                 False narratives drive wedges between
                                 communities, amplifying polarization and
                                 undermining social cohesion essential for
@@ -43,20 +47,20 @@ const Impact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="border-2 flex gap-4 px-10 py-15 rounded-xl">
-                        <div className="bg-[#ffedd8] h-fit rounded-full p-5 lg:p-2">
+                    <div className="border border-[#e0c9a6] flex gap-4 px-10 py-15 rounded-xl bg-[#faedcd]">
+                        <div className="bg-[#faedcd] h-fit rounded-full p-5 lg:p-2">
                             <img
-                                className="w-20 lg-w-10"
+                                className="w-20 lg-w-10 bg-[#faedcd]"
                                 src={globe}
                                 alt="users"
                             />
                         </div>
 
-                        <div className="flex flex-col gap-1">
-                            <div className="font-bold text-2xl">
+                        <div className="flex flex-col gap-1 bg-[#faedcd]">
+                            <div className="font-bold text-2xl bg-[#faedcd]">
                                 Democratic Deterioration
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-lg">
+                            <div className=" text-sm lg:text-lg bg-[#faedcd]">
                                 Misinformation erodes public trust in
                                 institutions and the electoral process,
                                 threatening the foundations of democratic
@@ -64,20 +68,20 @@ const Impact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="border-2 flex gap-4 px-10 py-15 rounded-xl">
-                        <div className="bg-[#ffedd8] h-fit rounded-full p-5 lg:p-2">
+                    <div className="border border-[#e0c9a6] flex gap-4 px-10 py-15 rounded-xl bg-[#faedcd]">
+                        <div className="bg-[#faedcd] h-fit rounded-full p-5 lg:p-2">
                             <img
-                                className="w-20 lg-w-10"
+                                className="w-20 lg-w-10 bg-[#faedcd]"
                                 src={sliders}
                                 alt="users"
                             />
                         </div>
 
-                        <div className="flex flex-col gap-1">
-                            <div className="font-bold text-2xl">
+                        <div className="flex flex-col gap-1 bg-[#faedcd]">
+                            <div className="font-bold text-2xl bg-[#faedcd]">
                                 Cognitive Manipulation
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-lg">
+                            <div className=" text-sm lg:text-lg bg-[#faedcd]">
                                 Repeated exposure to falsehoods can rewire
                                 cognitive processing, making individuals
                                 susceptible to believing subsequent
@@ -85,20 +89,20 @@ const Impact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="border-2 flex gap-4 px-10 py-15 rounded-xl">
-                        <div className="bg-[#ffedd8] h-fit rounded-full p-5 lg:p-2">
+                    <div className="border bg-[#faedcd] flex gap-4 px-10 py-15 rounded-xl">
+                        <div className="bg-[#faedcd] h-fit rounded-full p-5 lg:p-2">
                             <img
-                                className="w-20 lg-w-10"
+                                className="w-20 lg-w-10 bg-[#faedcd]"
                                 src={activity}
                                 alt="users"
                             />
                         </div>
 
-                        <div className="flex flex-col gap-1">
-                            <div className="font-bold text-2xl">
+                        <div className="flex flex-col gap-1 bg-[#faedcd]">
+                            <div className="font-bold text-2xl bg-[#faedcd]">
                                 Public Health Threats
                             </div>
-                            <div className="text-gray-500 text-sm lg:text-lg">
+                            <div className=" text-sm lg:text-lg bg-[#faedcd]">
                                 Misleading health information can lead to
                                 dangerous behaviors, rejection of life-saving
                                 treatments, and compromised community health.
@@ -107,15 +111,18 @@ const Impact = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-gray-200 mx-5 lg:mx-60 rounded-xl px-7 lg:px-15 py-5 shadow-xl">
-                <div className="text-sm lg:text-lg">
-                    The spread of false information is one of the most urgent
-                    threats facing our interconnected world. Combating this
-                    threat requires not only technological solutions but also a
-                    commitment to media literacy and critical thinking.
-                </div>
-                <div className="font- flex justify-end text-sm lg:text-md">
-                    -World Freedom Index, 2023
+            <div className="flex items-center justify-center">
+                <div className="w-[50%] border bg-[#f3dcaf] mx-5 lg:mx-60 rounded-xl px-7 lg:px-10 py-5 mb-7">
+                    <div className="text-sm lg:text-lg bg-[#f3dcaf] font-serif">
+                        The spread of false information is one of the most
+                        urgent threats facing our interconnected world.
+                        Combating this threat requires not only technological
+                        solutions but also a commitment to media literacy and
+                        critical thinking.
+                    </div>
+                    <div className="font-bold font-serif flex justify-end text-sm lg:text-md bg-[#f3dcaf]">
+                        - World Freedom Index, 2023
+                    </div>
                 </div>
             </div>
         </div>

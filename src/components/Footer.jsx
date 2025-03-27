@@ -3,12 +3,12 @@ import React from "react";
 const Footer = () => {
     return (
         <div>
-            <div className="flex flex-col text-sm lg:text-md lg:flex-row mx-5 gap-20 lg:mx-10 p-7 lg:p-15 border-y-2">
+            <div className="flex flex-col text-sm lg:text-md lg:flex-row mx-5 gap-20 lg:mx-10 p-7 lg:p-15 border-y border-[#e0c9a6]">
                 <div className="w-[100%] lg:w-[50%]">
-                    <div className="text-orange-900 mb-2 font-serif font-bold text-xl">
+                    <div className="text-[#6c3d0f] mb-2 font-serif font-bold text-xl">
                         Veritas
                     </div>
-                    <div className="text-gray-400">
+                    <div>
                         AI-powered news verification tool helping you navigate
                         the complex media landscape with confidence. Detect
                         bias, verify credibility, and make informed decisions.
@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
                 <div className="flex justify-between w-[100%] lg:w-[50%]">
                     <div className="w-[50%] flex lg:justify-end">
-                        <ul className="text-gray-500">
+                        <ul>
                             <div className="text-black mb-2 font-serif font-bold">
                                 Navigation
                             </div>
@@ -26,7 +26,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="w-[50%] flex justify-end">
-                        <ul className="text-gray-500">
+                        <ul>
                             <div className="text-black mb-2 font-serif font-bold">
                                 Legal
                             </div>
@@ -37,9 +37,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-4  lg:flex-row justify-between text-xs m-5 px-5 lg:px-15 text-gray-400">
+            <div className="flex flex-col gap-4  lg:flex-row justify-between text-xs m-5 px-5 lg:px-15">
                 <div>
-                    ©{new Date().getFullYear()} Veritas. All rights reserved.
+                    © {new Date().getFullYear()} Veritas. All rights reserved.
                 </div>
                 <div>
                     This tool does not store content of analyzed articles. AI
