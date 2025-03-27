@@ -1,7 +1,5 @@
 # Veritas - AI-Powered Media Bias Analyzer
 
-🚀 **Open-source AI-powered media bias analyzer** for evaluating news credibility and misinformation.
-
 ## 🌟 Overview
 
 Veritas is an AI-driven platform designed to analyze media articles for bias, misinformation, and credibility. Veritas provides insights into:
@@ -19,8 +17,8 @@ Veritas is an AI-driven platform designed to analyze media articles for bias, mi
 
 ## 🛠️ Tech Stack
 
--   **Frontend**: React.js
--   **Backend**: Node.js / Axios / Sonar
+-   **Frontend**: React.js / shadcn / TailwindCSS
+-   **Backend**: Node.js / Axios / Sonar model
 
 ## 🚀 Getting Started
 
@@ -50,9 +48,5 @@ Veritas is an **open-source project**, and we welcome contributions! To contribu
 1. Fork the repo and create a new branch.
 2. Implement your changes and commit them.
 3. Submit a Pull Request (PR).
-
-## 📜 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 📢 _Help us build a world with unbiased news consumption!_ 🚀
