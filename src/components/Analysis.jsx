@@ -6,8 +6,52 @@ import ai from "../assets/ai.png";
 
 const Analysis = ({ query, setQuery, setResponse }) => {
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+
+    // URL validation function
+    const isValidUrl = (url) => {
+        try {
+            // Attempt to create a URL object from the input string
+            // This will throw an error if the URL is fundamentally invalid
+            const parsedUrl = new URL(url);
+
+            // Check for valid protocol
+            const validProtocol =
+                parsedUrl.protocol === "http:" ||
+                parsedUrl.protocol === "https:";
+
+            // Get the hostname from the parsed URL
+            const hostname = parsedUrl.hostname;
+
+            // Ensure hostname has at least one dot and is not just ending with a dot
+            const validHostname =
+                hostname.includes(".") &&
+                !hostname.endsWith(".") &&
+                hostname.split(".").some((part) => part.length > 1);
+
+            return validProtocol && validHostname;
+        } catch {
+            return false;
+        }
+    };
+
     const handleSubmit = async () => {
-        setLoading(true); // Start loading
+        // Reset previous error
+        setError("");
+
+        // Check if input is empty
+        if (!query.trim()) {
+            setError("Please enter a URL");
+            return;
+        }
+
+        // Validate URL
+        if (!isValidUrl(query)) {
+            setError("Please enter a valid URL");
+            return;
+        }
+
+        setLoading(true);
         try {
             const result = await analyzeNewsArticle(query);
             const response = await result.json();
@@ -18,29 +62,28 @@ const Analysis = ({ query, setQuery, setResponse }) => {
             console.error("Error analyzing article:", error);
             setResponse("Failed to analyze the article. Please try again.");
         } finally {
-            setLoading(false); // Stop loading after response
+            setLoading(false);
         }
     };
 
     return (
         <div className="h-[50vh] flex items-center justify-center">
             <div className="flex justify-center">
-                <div className="w-[90vw] lg:w-[60vw] rounded-4xl mx-5 py-10 lg:py-20 bg-[#f3dcaf]  border border-[#e0c9a6]">
+                <div className="w-[90vw] lg:w-[60vw] rounded-4xl mx-5 py-10 lg:py-20 bg-[#f3dcaf] border border-[#e0c9a6]">
                     <div className="flex flex-col justify-center items-center gap-5 bg-[#f3dcaf]">
                         <div className="w-fit text-black text-xs lg:text-sm rounded-2xl px-3 py-1 flex gap-1 border border-[#e0c9a6]">
-                            <div className="text-orange-900 bg-[#f3dcaf] ">
+                            <div className="text-orange-900 bg-[#f3dcaf]">
                                 <img className="h-5" src={ai} alt="" />{" "}
                             </div>
-                            {""}
                             <div className="flex items-center">
                                 AI-powered news analysis
                             </div>
                         </div>
-                        <div className="flex gap-1 text-lg flex-col  items-center text-center bg-[#f3dcaf]">
+                        <div className="flex gap-1 text-lg flex-col items-center text-center bg-[#f3dcaf]">
                             <div className="text-2xl lg:text-3xl font-bold flex items-center bg-[#f3dcaf]">
                                 Analyze News Article{" "}
                             </div>
-                            <div className=" text-sm lg:text-lg px-6 bg-[#f3dcaf]">
+                            <div className="text-sm lg:text-lg px-6 bg-[#f3dcaf]">
                                 Enter the URL of a news article to analyze it
                                 for bias, credibility, and balanced reporting.
                             </div>
@@ -51,9 +94,17 @@ const Analysis = ({ query, setQuery, setResponse }) => {
                                     className="bg-[#f4f3ee] border border-[#e0c9a6] h-15 w-[100%] rounded-lg text-sm lg:text-md py-3 md:py-5 lg:py-7 px-3 lg:px-5"
                                     placeholder="https://example.com/news-article"
                                     value={query}
-                                    onChange={(e) => setQuery(e.target.value)}
+                                    onChange={(e) => {
+                                        setQuery(e.target.value);
+                                        setError(""); // Clear error when user starts typing
+                                    }}
                                 />
-                                <div className="text-[9px] lg:text-[11px] px-3 lg:px-5  mt-1 bg-[#f3dcaf]">
+                                {error && (
+                                    <div className="text-red-600  bg-[#f3dcaf] text-xs lg:text-sm px-3 lg:px-5 mt-1">
+                                        {error}
+                                    </div>
+                                )}
+                                <div className="text-[9px] lg:text-[11px] px-3 lg:px-5 mt-1 bg-[#f3dcaf]">
                                     Enter the direct URL to a news article. The
                                     content will be fetched and analyzed.
                                 </div>
@@ -62,8 +113,8 @@ const Analysis = ({ query, setQuery, setResponse }) => {
                             <div className="flex justify-end bg-[#f3dcaf]">
                                 <Button
                                     onClick={handleSubmit}
-                                    disabled={loading} // Disable when loading
-                                    className={`cursor-pointer text-md  bg-[#6c3d0f]  hover:bg-orange-900 text-white py-5 lg:py-7 px-3 lg:px-5 rounded-4xl ${
+                                    disabled={loading}
+                                    className={`cursor-pointer text-md bg-[#6c3d0f] hover:bg-orange-900 text-white py-5 lg:py-7 px-3 lg:px-5 rounded-4xl ${
                                         loading
                                             ? "opacity-50 cursor-not-allowed"
                                             : ""
@@ -71,7 +122,7 @@ const Analysis = ({ query, setQuery, setResponse }) => {
                                 >
                                     {loading ? (
                                         <div className="flex items-center gap-2 text-black bg-[#6c3d0f]">
-                                            <span className="animate-spin  bg-[#6c3d0f] h-5 w-5 border-2 border-white rounded-full"></span>
+                                            <span className="animate-spin bg-[#6c3d0f] h-5 w-5 border-t-2 border-white rounded-full"></span>
                                             <div className="bg-[#6c3d0f] text-white">
                                                 Analysing...
                                             </div>
