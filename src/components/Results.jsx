@@ -99,9 +99,9 @@ const Results = ({ response }) => {
                 <div className="text-3xl text-[#6c3d0f] bg-[#f3dcaf] font-black">
                     Overall Assessment
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col bg-[#f3dcaf] gap-2">
                     <div className="flex gap-2 bg-[#f3dcaf]">
-                        <p>
+                        <p className="bg-[#f3dcaf]">
                             <strong className="bg-[#f3dcaf]">
                                 Overall Bias Score:
                             </strong>
@@ -110,9 +110,11 @@ const Results = ({ response }) => {
                             {overallBiasScore}
                         </div>
                     </div>
-                    <div className="flex gap-2">
-                        <p>
-                            <strong>Credibility Rating:</strong>
+                    <div className="flex gap-2 bg-[#f3dcaf]">
+                        <p className="bg-[#f3dcaf]">
+                            <strong className="bg-[#f3dcaf]">
+                                Credibility Rating:
+                            </strong>
                         </p>
                         <div className="underline bg-[#f3dcaf] decoration-[#6c3d0f] underline-offset-5 decoration-4">
                             {credibilityRating}
@@ -126,42 +128,50 @@ const Results = ({ response }) => {
                 <h3 className="text-2xl font-bold text-[#6c3d0f] mb-4 bg-[#f3dcaf]">
                     Source Evaluation
                 </h3>
-                <div className="space-y-4">
-                    <div>
-                        <h4 className="font-semibold mb-2">Reputation:</h4>
-                        <p>{sourceReputation}</p>
+                <div className="space-y-4 bg-[#f3dcaf]">
+                    <div className="bg-[#f3dcaf]">
+                        <h4 className="font-semibold mb-2 bg-[#f3dcaf]">
+                            Reputation:
+                        </h4>
+                        <p className="bg-[#f3dcaf]">{sourceReputation}</p>
                     </div>
-                    <div>
-                        <h4 className="font-semibold mb-2">Fact Checking:</h4>
-                        <p>{factChecking}</p>
+                    <div className="bg-[#f3dcaf]">
+                        <h4 className="font-semibold mb-2 bg-[#f3dcaf]">
+                            Fact Checking:
+                        </h4>
+                        <p className="bg-[#f3dcaf]">{factChecking}</p>
                     </div>
                 </div>
             </div>
 
             {/* Bias Indicators */}
             <div className="w-[80vw] border border-[#ddb892] rounded-4xl p-8 bg-[#f3dcaf]">
-                <h3 className="text-2xl font-bold text-[#6c3d0f] mb-4">
+                <h3 className="text-2xl font-bold text-[#6c3d0f] mb-4 bg-[#f3dcaf]">
                     Bias Indicators
                 </h3>
-                <div className="space-y-6">
-                    <div className="border-b border-[#ddb892] pb-4">
-                        <h4 className="font-semibold text-lg mb-2">
+                <div className="space-y-6 bg-[#f3dcaf]">
+                    <div className="border-b border-[#ddb892] pb-4 bg-[#f3dcaf]">
+                        <h4 className="font-semibold text-lg mb-2 bg-[#f3dcaf]">
                             {biasType1}
                         </h4>
-                        <p className="mb-2">{biasDesc1}</p>
-                        <div>
-                            <h5 className="font-semibold mb-1">Example:</h5>
-                            <p>{biasExample1}</p>
+                        <p className="mb-2 bg-[#f3dcaf]">{biasDesc1}</p>
+                        <div className="bg-[#f3dcaf]">
+                            <h5 className="font-semibold mb-1 bg-[#f3dcaf]">
+                                Example:
+                            </h5>
+                            <p className="bg-[#f3dcaf]">{biasExample1}</p>
                         </div>
                     </div>
-                    <div>
-                        <h4 className="font-semibold text-lg mb-2">
+                    <div className="bg-[#f3dcaf]">
+                        <h4 className="font-semibold text-lg mb-2 bg-[#f3dcaf]">
                             {biasType2}
                         </h4>
-                        <p className="mb-2">{biasDesc2}</p>
-                        <div>
-                            <h5 className="font-semibold mb-1">Example:</h5>
-                            <p>{biasExample2}</p>
+                        <p className="mb-2 bg-[#f3dcaf]">{biasDesc2}</p>
+                        <div className="bg-[#f3dcaf]">
+                            <h5 className="font-semibold mb-1 bg-[#f3dcaf]">
+                                Example:
+                            </h5>
+                            <p className="bg-[#f3dcaf]">{biasExample2}</p>
                         </div>
                     </div>
                 </div>
@@ -169,31 +179,35 @@ const Results = ({ response }) => {
 
             {/* Perspective Coverage */}
             <div className="w-[80vw] border border-[#ddb892] rounded-4xl p-8 bg-[#f3dcaf]">
-                <h3 className="text-2xl font-bold text-[#6c3d0f] mb-4">
+                <h3 className="text-2xl font-bold text-[#6c3d0f] mb-4 bg-[#f3dcaf]">
                     Perspective Coverage
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 className="font-semibold mb-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#f3dcaf]">
+                    <div className="bg-[#f3dcaf]">
+                        <h4 className="font-semibold mb-2 bg-[#f3dcaf]">
                             Covered Perspectives:
                         </h4>
-                        <ul className="list-disc list-inside">
+                        <ul className="list-disc list-inside bg-[#f3dcaf]">
                             {coveredPerspectives
                                 .split(",")
                                 .map((perspective, index) => (
-                                    <li key={index}>{perspective.trim()}</li>
+                                    <li className="bg-[#f3dcaf]" key={index}>
+                                        {perspective.trim()}
+                                    </li>
                                 ))}
                         </ul>
                     </div>
-                    <div>
-                        <h4 className="font-semibold mb-2">
+                    <div className="bg-[#f3dcaf]">
+                        <h4 className="font-semibold mb-2 bg-[#f3dcaf]">
                             Missing Perspectives:
                         </h4>
-                        <ul className="list-disc list-inside">
+                        <ul className="list-disc list-inside bg-[#f3dcaf]">
                             {missingPerspectives
                                 .split(",")
                                 .map((perspective, index) => (
-                                    <li key={index}>{perspective.trim()}</li>
+                                    <li className="bg-[#f3dcaf]" key={index}>
+                                        {perspective.trim()}
+                                    </li>
                                 ))}
                         </ul>
                     </div>
@@ -202,17 +216,21 @@ const Results = ({ response }) => {
 
             {/* Recommendations */}
             <div className="w-[80vw] border border-[#ddb892] rounded-4xl p-8 bg-[#f3dcaf]">
-                <h3 className="text-2xl font-bold text-[#6c3d0f] mb-4">
+                <h3 className="text-2xl font-bold text-[#6c3d0f] mb-4 bg-[#f3dcaf]">
                     Recommendations
                 </h3>
-                <div className="space-y-4">
-                    <div>
-                        <h4 className="font-semibold mb-2">Summary:</h4>
-                        <p>{summary}</p>
+                <div className="space-y-4 bg-[#f3dcaf]">
+                    <div className="bg-[#f3dcaf]">
+                        <h4 className="font-semibold mb-2 bg-[#f3dcaf]">
+                            Summary:
+                        </h4>
+                        <p className="bg-[#f3dcaf]">{summary}</p>
                     </div>
-                    <div>
-                        <h4 className="font-semibold mb-2">Reading Advice:</h4>
-                        <p>{readingAdvice}</p>
+                    <div className="bg-[#f3dcaf]">
+                        <h4 className="font-semibold mb-2 bg-[#f3dcaf]">
+                            Reading Advice:
+                        </h4>
+                        <p className="bg-[#f3dcaf]">{readingAdvice}</p>
                     </div>
                 </div>
             </div>
