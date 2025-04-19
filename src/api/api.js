@@ -18,10 +18,10 @@ const analyzeNewsArticle = (articleText) => {
             messages: [
                 {
                     role: "user",
-                    content: `Analyze the news article for bias.
+                    content: `Analyze the news article for bias and credibility.
 
 IMPORTANT FORMATTING INSTRUCTIONS:
-1. RESPOND ONLY WITH A VALID JSON
+1. RESPOND ONLY WITH A VALID JSON ARRAY
 2. DO NOT include any explanatory text before or after the JSON
 3. DO NOT use markdown, code blocks, or any additional formatting
 4. ENSURE the JSON is directly parseable by JSON.parse()
@@ -30,59 +30,22 @@ Article Text:
 ${articleText}
 
 JSON RESPONSE FORMAT:
-{
-    "overallBiasScore": "Low/Moderate/High",
-    "credibilityRating": "Low/Medium/High",
-    "sections": [
-        {
-            "title": "Source Credibility",
-            "content": {
-                "sourceReputation": "String description",
-                "potentialBiasOrigins": "String explanation",
-                "factualConsistency": "String assessment"
-            }
-        },
-        {
-            "title": "Linguistic Bias Indicators",
-            "content": [
-                {
-                    "type": "Emotional Language/Framing Bias",
-                    "examples": ["Specific language examples"],
-                    "impact": "How language might influence perception"
-                }
-            ]
-        },
-        {
-            "title": "Perspective Analysis",
-            "content": {
-                "perspectiveCoverage": "Description of viewpoint breadth",
-                "missingPerspectives": ["List of perspectives not covered"],
-                "balanceScore": "Numerical score 1-10"
-            }
-        },
-        {
-            "title": "Bias Type Breakdown",
-            "content": [
-                {
-                    "type": "Selection Bias/Contextual Bias",
-                    "details": "Explanation of bias type",
-                    "severity": "Low/Moderate/High"
-                }
-            ]
-        },
-        {
-            "title": "Recommended Reader Approach",
-            "content": [
-                "Recommendation 1",
-                "Recommendation 2"
-            ]
-        }
-    ],
-    "conclusion": {
-        "summaryStatement": "Concise bias summary",
-        "readingRecommendation": "Advice for reading the article"
-    }
-}`,
+[
+    "Overall Bias Score (Low/Moderate/High)",
+    "Credibility Rating (Low/Medium/High)",
+    "Source Reputation Description",
+    "Fact Checking Assessment",
+    "Bias Indicator Type 1",
+    "Bias Indicator Description 1",
+    "Bias Indicator Example 1",
+    "Bias Indicator Type 2",
+    "Bias Indicator Description 2",
+    "Bias Indicator Example 2",
+    "Covered Perspectives (comma-separated)",
+    "Missing Perspectives (comma-separated)",
+    "Analysis Summary",
+    "Reading Advice"
+]`,
                 },
             ],
         }),
