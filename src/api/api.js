@@ -24,7 +24,8 @@ IMPORTANT FORMATTING INSTRUCTIONS:
 1. RESPOND ONLY WITH A VALID JSON ARRAY
 2. DO NOT include any explanatory text before or after the JSON
 3. DO NOT use markdown, code blocks, or any additional formatting
-4. ENSURE the JSON is directly parseable by JSON.parse()
+4. DO NOT include citation markers like [1], [2], etc.
+5. ENSURE the JSON is directly parseable by JSON.parse()
 
 Article Text:
 ${articleText}
