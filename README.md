@@ -15,11 +15,6 @@ Veritas is an AI-driven platform designed to analyze media articles for bias, mi
 -   **Multi-Language Support**: Analyzes news in various languages.
 -   **User-Friendly Interface**: Easy-to-use web interface for analyzing articles.
 
-## 🛠️ Tech Stack
-
--   **Frontend**: React.js / shadcn / TailwindCSS
--   **Backend**: Node.js / Axios / Sonar model
-
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
