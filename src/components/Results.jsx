@@ -8,31 +8,11 @@ const Results = ({ response }) => {
     useEffect(() => {
         try {
             if (typeof response === "string") {
-                console.log("Raw response:", response);
                 const cleanResponse = response
                     .replace(/```json|```/g, "")
                     .trim();
-                console.log("Cleaned response:", cleanResponse);
 
-                // Try to parse as array first
-                let data;
-                try {
-                    data = JSON.parse(cleanResponse);
-                } catch {
-                    // If parsing fails, try to extract array from the string
-                    const arrayMatch = cleanResponse.match(/\[[\s\S]*\]/);
-                    if (arrayMatch) {
-                        data = JSON.parse(arrayMatch[0]);
-                    } else {
-                        throw new Error("No valid array found in response");
-                    }
-                }
-
-                if (!Array.isArray(data) || data.length < 14) {
-                    throw new Error(
-                        "Invalid response format: expected array with 14 elements"
-                    );
-                }
+                const data = JSON.parse(cleanResponse);
 
                 setParsedResponse(data);
             } else {
@@ -62,21 +42,21 @@ const Results = ({ response }) => {
     if (!parsedResponse) return <p>Loading analysis...</p>;
 
     const [
-        overallBiasScore,
-        credibilityRating,
-        sourceReputation,
-        factChecking,
-        biasType1,
-        biasDesc1,
-        biasExample1,
-        biasType2,
-        biasDesc2,
-        biasExample2,
-        coveredPerspectives,
-        missingPerspectives,
-        summary,
-        readingAdvice,
-    ] = parsedResponse;
+        overallBiasScore = "Not available",
+        credibilityRating = "Not available",
+        sourceReputation = "Not available",
+        factChecking = "Not available",
+        biasType1 = "Not available",
+        biasDesc1 = "Not available",
+        biasExample1 = "Not available",
+        biasType2 = "Not available",
+        biasDesc2 = "Not available",
+        biasExample2 = "Not available",
+        coveredPerspectives = "Not available",
+        missingPerspectives = "Not available",
+        summary = "Not available",
+        readingAdvice = "Not available",
+    ] = parsedResponse || [];
 
     return (
         <div className="flex flex-col items-center justify-center gap-6 mx-5 lg:mx-10 rounded-xl px-7 lg:px-15 py-10 text-lg mt-10">
